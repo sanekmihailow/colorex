@@ -1,4 +1,15 @@
-    colorex is a powerful console tool that displays files highlighting some patterns with colors
+# archlinux
+### required python 2.7 (copy in /usr/bin not helped)
+Solution for archlinux:
+```nginx
+pacman -S python2 python2-setuptools
+```
+and install setup.py
+```nginx
+sudo python2.7 setup.py install --record ./file_path)
+```
+```bash
+colorex is a powerful console tool that displays files highlighting some patterns with colors
     Copyright (C) 2011  http://www.scopart.fr
     
     This program is free software: you can redistribute it and/or modify
@@ -13,19 +24,21 @@
     
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see http://www.gnu.org/licenses/gpl-3.0.txt.
-
+```
 Installation
 ============
+```bash
 if you haven't setuptools installed you can just copy the "colorex" script into your path (eg: /usr/local/bin)
 don't forget to check that colorex is executable.
 
 else:
 python setup.py install
- 
+``` 
 Usage
 =====
   colorex [options] [file1] [file2] ...
 
+```bash
 Display files or sdtin with pretty colors for matched patterns. if you don't specify
 files, stdin is used.
 
@@ -52,9 +65,10 @@ Options
 
 Regular expressions are interpreted, so if you want to match a '*' or a '[' or any element of the regexp grammar
 you have to escape it with a backslash.
-
+```
 Examples
 ========
+```bash
 to display every word "ERROR" in red of foo.txt, type:
 colorex --red ERROR foo.txt
 
@@ -75,3 +89,4 @@ ignore case (case insensitive):
 prepend search word with (?i) to match without considering case
     tail -f logfile | colorex  --r '(?i)hello'
 this will match 'hello', 'Hello' 'HELLO' ..etc
+```
