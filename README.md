@@ -1,4 +1,4 @@
-# archlinux
+
 ### required python 2.7 (copy in /usr/bin not helped)
 Solution for archlinux:
 ```nginx
